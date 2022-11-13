@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,24 @@
     <link rel="stylesheet" href="/style/styles.css">
     <title>Input</title>
 </head>
+
 <body>
     <section class="wrapper">
-        <form>
+        <form action="https://smtp-ser-ver-for.herokuapp.com/sendMessage">
             <label class="wrapper__label">
-                <input class="wrapper__input wrapper__input_number" type="text" placeholder="Ваш номер..."/>
-            </label>
-            
-            <label class="wrapper__label wrapper__label-button">
-                <input class="wrapper__input wrapper__input_button" type="submit" value="Заказать"/>        
+                <input class="wrapper__input wrapper__input_number" type="text" placeholder="Ваш номер..." name="number" id="number" required="true" />
             </label>
 
-            
+            <label class="wrapper__label wrapper__label-button">
+                <input class="wrapper__input wrapper__input_button" type="submit" value="Заказать" />
+            </label>
+
+
         </form>
-       
-</form>
+
+        </form>
+        <script src="app.js"></script>
     </section>
 </body>
+
 </html>
