@@ -5,6 +5,8 @@
 }
 
 .wrapper {
+    background-image: url('../assets/imges/blue-drops-bg.jpg');
+    background-size: cover;
     width: 1000px;
     height: 500px;
     margin: 0 auto;
@@ -12,8 +14,7 @@
     align-items: center;
     justify-content: center;
     border: 1px solid firebrick;
-    background-image: url('./../assets/imges/blue-drops-bg.jpg');
-    background-size: cover;
+
 
 }
 

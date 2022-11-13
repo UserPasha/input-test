@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background-image: url('../assets/imges/blue-drops-bg.jpg');
+  background-size: cover;
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid firebrick;
+
+  .wrapper__label {
+    width: 300px;
+    height: 50px;
+    display: inline-block;
+    border: 2px solid #FFF;
+    background: #FFF;
+    opacity: 0.8;
+    padding: 5px 20px;
+    transform: skewX(-40deg);
+    -ms-transform: skewX(-40deg);
+
+    .wrapper__input {
+      width: 200px;
+      height: 36px;
+      padding: 5px 10px;
+      font-size: 24px;
+      border: none;
+      outline: none;
+      transform: skewX(40deg);
+      -ms-transform: skewX(40deg);
+    }
+  }
+
+  .wrapper__label-button {
+    background: #F00;
+    border: 2px solid #FFF;
+    opacity: 1;
+    margin-left: -3px;
+
+    .wrapper__input_button {
+      background: #F00;
+      color: #FFF;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 40px;
+
+    .wrapper__label {
+      width: 50%;
+      height: 50px;
+      padding: 5px;
+      transform: skewX(0deg);
+      -ms-transform: skewX(0deg);
+
+      .wrapper__input {
+        width: 100%;
+        padding: 5px;
+        font-size: 16px;
+        transform: skewX(0deg);
+        -ms-transform: skewX(0deg);
+      }
+
+    }
+
+    .wrapper__label-button {
+      width: 45%;
+    }
+
+  }
+}

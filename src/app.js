@@ -1,3 +1,7 @@
+import './style/styles.css'
+import './style/styles.scss'
+
+
 const form = document.querySelector('form');
 const action = form.action
 
