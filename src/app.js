@@ -1,15 +1,18 @@
 import './style/styles.css'
 import './style/styles.scss'
+import image from "./assets/imges/blue-drops-bg.jpg"
 import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
-
 const form = document.querySelector('form');
 const input = document.getElementById("number")
+const wrapper = document.getElementById('wrapper')
+wrapper.style.backgroundImage = `url(${image})`
 
 
-const action = 'https://smtp-ser-ver-for.herokuapp.com/sendMessage'
+
+const action = 'https://smtp-ser-ver-for.herokuapp.com/sendTest'
 
 
 const showMessage = (data) => {
@@ -27,8 +30,6 @@ const onSubmit =  (e) => {
     e.preventDefault()
     const payload = {
         data:{
-            Email: 'test@mail',
-            Name: 'Name',
             Message: input.value
         }
     };

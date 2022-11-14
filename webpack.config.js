@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserWebPackPlugin = require('terser-webpack-plugin')
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin')
 
-const isDev = process.env.NODE_ENV = 'development'
+const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 
 const optimization = () => {
@@ -78,7 +78,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: ['@babel/env']
                     }
                 }
             },
