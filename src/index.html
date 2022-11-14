@@ -12,20 +12,25 @@
 
 <body>
     <section class="wrapper">
+        <div class="icon__wrapper">
+            <i class="fas fa-check"></i>
+        </div>
+
         <form action="https://smtp-ser-ver-for.herokuapp.com/sendMessage">
             <label class="wrapper__label">
                 <input class="wrapper__input wrapper__input_number" type="text" placeholder="Ваш номер..." name="number" id="number" required="true" />
             </label>
 
+
             <label class="wrapper__label wrapper__label-button">
-                <input class="wrapper__input wrapper__input_button" type="submit" value="Заказать" />
+                <input class="wrapper__input wrapper__input_button" type="submit" value="Заказать" id="button" />
             </label>
 
 
-        </form>
+
 
         </form>
-<!--        <script src="app.js"></script>-->
+        <script src="app.js"></script>
     </section>
 </body>
 

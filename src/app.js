@@ -1,27 +1,16 @@
 import './style/styles.css'
 import './style/styles.scss'
-
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid'
+import '@fortawesome/fontawesome-free/js/regular'
+import '@fortawesome/fontawesome-free/js/brands'
 
 const form = document.querySelector('form');
-const action = form.action
+const input = document.getElementById("number")
 
-const dataCollection = (currentForm) => {
-    const data = new FormData(currentForm);
-    
-    return data;
-   
-}
 
-const options = (currentForm) => {
-    return {
-        method: 'post',
-        body: dataCollection(currentForm),
-    };
-}
+const action = 'https://smtp-ser-ver-for.herokuapp.com/sendMessage'
 
-const sendForm = (currentForm) => {
-    return fetch(action, options(currentForm));
-}
 
 const showMessage = (data) => {
     alert(data.message)
@@ -34,11 +23,25 @@ const onError = (data) => {
     console.error(data);
 }
 
-const onSubmit = (e) => {
+const onSubmit =  (e) => {
     e.preventDefault()
-    sendForm(e.currentTarget)
-        .then(response => onSuccess(response, currentTarget))
-        .catch(onError);
+    const payload = {
+        data:{
+            Email: 'test@mail',
+            Name: 'Name',
+            Message: input.value
+        }
+    };
+    fetch(action, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:  JSON.stringify( payload )
+    })
+        .then(response => onSuccess(response))
+        .catch(onError)
+
 }
 
 form.addEventListener('submit', onSubmit);

@@ -5,17 +5,22 @@
 }
 
 .wrapper {
-    background-image: url('../assets/imges/blue-drops-bg.jpg');
-    background-size: cover;
+    /*background-image: url('../assets/imges/blue-drops-bg.jpg');*/
+    /*background-size: cover;*/
+    background: #2d6cab;
     width: 1000px;
     height: 500px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     border: 1px solid firebrick;
-
-
+}
+.icon__wrapper{
+    width: 20px;
+    height: 20px;
+    margin: 20px auto;
 }
 
 .wrapper__label {
